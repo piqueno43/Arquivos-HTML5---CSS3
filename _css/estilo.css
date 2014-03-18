@@ -1,0 +1,286 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:200);
+@font-face {
+    font-family: 'Computador';
+    src: url('../_fonts/computerfont.ttf');
+    font-family: 'MinhaFonte';
+    src: url('../_fonts/BubblegumSans-Regular.otf');
+}
+
+/* -- GLOBAIS -- */
+
+article, aside, footer, header, hgroup, nav, menu, section, figure {display: block;}
+body {
+    background: #dddddd;
+    font: 100% "Arial";
+}
+p.texto {
+    text-indent: 40px;
+    text-align: justify;
+}
+a {
+    text-decoration: none;
+    color: #606060;
+}
+a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* -- INTERFACE -- */
+
+#interface {
+    width: 1070px;
+    background: #ffffff;
+    margin: -20px auto;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    position: relative;
+}
+
+header#cabecalho {
+    height: 150px;
+    background: url(../_imagens/glass-logo-peq.jpg) no-repeat 0 80px;
+    border-bottom: 1px #606060 solid;
+}
+
+header#cabecalho h1 {
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 30pt;
+    /* font-family: 'Roboto Slab', serif; */
+    color: #606060;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+
+    color: #888888;
+    margin-top: 0px;
+    font-size: 15pt;
+}
+
+header#cabecalho img#logo {
+    position: absolute;
+    left: 890px;
+    top: 70px;
+    z-index: 0; /* camada */
+}
+
+section#corpo {
+    width: 600px;
+    float: left;
+    padding: 0 20px 10px 10px;
+    border-right: 1px solid #606060;
+}
+
+section#corpo-full {
+    width: 100%;
+    float: none;
+    padding: 0 20px 10px 10px;
+    border: none;
+}
+
+aside#lateral {
+    width: 400px;
+    display: block;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+/* -- MENU -- */
+
+nav#menu ul {
+    list-style: none;
+    position: absolute;
+    top: -10px;
+    left:470px;
+    text-transform: uppercase;
+}
+
+nav#menu li {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    background-color: #dddddd;
+    transition: background-color 1s;   /* explicar -webkit -moz USAR prefixr.com */
+}
+
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+nav#menu a {
+    color: #000000;
+}
+
+nav#menu a:hover {
+    color: #ffffff;
+}
+
+nav#menu h1 {
+    display: none;
+    /* NÃO RECOMENDADO
+    position: absolute;
+    left: -2000px;   */
+}
+
+header#cabecalho img#icone{
+	float: right;
+}
+/* -- CONTEUDO -- */
+
+section#corpo {
+    text-align: justify;
+    border-right: 1px solid #606060;
+}
+
+header#cabecalho-corpo h1 {
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+   }
+
+header#cabecalho-corpo h2 {
+    color: #cecece;
+    margin: 0px 0 0 0px;
+    font-size: 14px;
+}
+
+header#cabecalho-corpo p#caminho {
+    text-indent: 0px;
+    color: #cecece;
+    font-size: 15px;
+}
+header#cabecalho-corpo p#data {
+    color: #606060;
+    text-align: right;
+    font-style: italic;
+    font-size: 10px;
+}
+
+article#texto-principal {
+    padding: 10px;
+}
+
+article#texto-principal h2 {
+    font-size: 20px;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0 5px 5px;
+    margin: 10px 0 10px 0;
+}
+
+aside#lateral {
+    text-align: justify;
+    background-color: #dddddd;
+}
+
+aside#lateral h1 {
+    font-family: 'MinhaFonte', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+}
+
+section#noticias h2 {
+    background-color: #606060;
+    margin-bottom: 0px;
+    padding: 10px 0 10px 10px;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+footer#rodape {
+    text-align: center;
+    font-style: italic;
+    color: #606060;
+}
+
+/* -- FOTO COM LEGENDA -- */
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid #ffffff;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+}
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0; /* no lugar de display: none */
+    position: absolute;
+    top:0;
+    background-color: rgba(0,0,0,.5);
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* tirar a sobra causada pelo padding acima */
+    transition: opacity 1s;
+}
+
+figure.foto-legenda figcaption p {
+    color: #FFFFFF;
+}
+
+figure.foto-legenda figcaption h3 {
+    background-color: rgba(0,0,0,.6);
+    margin: 0; padding: 10px;
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1; /* no lugar de display: block */
+}
+
+/* -- TABELA -- */
+table {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin:0 auto 0 auto;
+}
+
+table caption {
+    font-weight: bolder;
+    color: #888888;
+    font-size: 19px;
+}
+
+table caption span {
+    font-size: 10px;
+    display: block;
+    float: right;
+    margin-top: 10px;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #606060;
+}
+
+table td.c1 {
+    background-color: #606060;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+
+table td.c2 {
+    background-color: #cecece;
+}
